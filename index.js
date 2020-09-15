@@ -1,14 +1,11 @@
-// file 24h.js
 const puppeteer = require('puppeteer'); //phải có ";"
 
 (async () => {
     try {
-        // mở trình duyệt
         const browser = await puppeteer.launch({
             headless: false,
             // slowMo: 200,
         })
-        // Mở 1 page mới
         const page = await browser.newPage()
         // await page.goto('https://page.auctions.yahoo.co.jp/jp/auction/e463685456')
         // await page.waitForSelector('.ProductInformation__items > .ProductInformation__item > .Price > .Price__body > .Price__value')
@@ -17,7 +14,6 @@ const puppeteer = require('puppeteer'); //phải có ";"
         //     const tweet = await (await tweets[i].getProperty('innerText')).jsonValue()
         //     console.log(tweet)
         // }
-        // đi đến trang 24h
         await page.goto('https://24h.com.vn')
 
         //1)
@@ -63,7 +59,6 @@ const puppeteer = require('puppeteer'); //phải có ";"
         }
         // console.log(articles)
 
-        // tắt trình duyệt
         await browser.close()
     } catch (err) {
         console.log("ERR!!! " + err)
@@ -72,10 +67,9 @@ const puppeteer = require('puppeteer'); //phải có ";"
 
 async function getTitle(arg_link, arg_page, arg_title) {
     await arg_page.goto(arg_link, {
-        // Set timeout cho page
         timeout: 3000000
     })
-    // Chờ 2s sau khi page được load để tránh overload
+    // Chờ 1s sau khi page được load để tránh overload
     await arg_page.waitForTimeout(1000)
 
     let title = await arg_page.evaluate(() => {
