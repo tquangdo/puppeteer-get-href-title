@@ -22,7 +22,7 @@ const puppeteer = require('puppeteer'); //phải có ";"
         // await page.screenshot({ path: '24h.png' })
 
         //2)
-        // const dimensions = await page.evaluate(() => {
+        // const dimensions = await page.evaluate(() => { //trong hàm evaluate() KO được gọi biến định nghĩa từ ngoài vào!!!
         //     return {
         //         width: document.documentElement.clientWidth,
         //         height: document.documentElement.clientHeight,
