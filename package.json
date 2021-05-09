@@ -1,5 +1,5 @@
 {
-  "name": "PuppeteerTest",
+  "name": "puppeteer-test",
   "version": "1.0.0",
   "description": "puppeteer",
   "main": "index.js",
