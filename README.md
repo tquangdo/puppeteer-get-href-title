@@ -3,7 +3,8 @@
 ![License](https://img.shields.io/github/license/tquangdo/puppeteer-get-href-title?color=f05340)
 
 ## deploy local
-1/ npm i 2/nodemon index
+1. `npm i`
+2. `nodemon index`
 
 ## URL1: https://www.easycompare.co.th/quote-form?formID=HP-CMB-TH
 ![URL1](screenshot/URL1.png)
